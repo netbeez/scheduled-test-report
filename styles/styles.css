@@ -1,0 +1,463 @@
+@charset "utf-8";
+
+/* reset and foundation styles for network status dashboard */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* general styles */
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #444444;
+    background-color: #ffffff;
+}
+
+a {
+    color: #08c;
+    text-decoration: none;
+}
+
+a:link {
+}
+
+a:visited {
+}
+
+a:hover,
+a:focus {
+    color: #005580;
+    text-decoration: none;
+}
+
+a:active {
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 24px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: inherit;
+}
+
+h6 {
+    font-size: 14px;
+    line-height: inherit;
+}
+
+em {
+    font-style: italic;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+
+
+
+/* - - - BUTTONS - - - */
+
+button,
+.button,
+.btn {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    color: #444444;
+    text-shadow: none;
+    background-image: none;
+    background-color: #f5f5f5;
+    border: 1px solid #dddddd;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #b3b3b3;
+    white-space: nowrap;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-shadow: 0 1.5px 3px -1px rgba(0,0,0, 0.35);
+    -moz-box-shadow: 0 1.5px 3px -1px rgba(0,0,0, 0.35);
+    box-shadow: 0 1.5px 3px -1px rgba(0,0,0, 0.35);
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active,
+.button.disabled,
+.button[disabled] {
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0, 0.30);
+    -moz-box-shadow: 0 2px 6px 0 rgba(0,0,0, 0.30);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0, 0.30);
+    background-color: #eaeaea;
+    color: #666666;
+}
+
+.button:active {
+    top: 2px;
+    left: 2px;
+}
+
+.button.active {
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0, 0.35);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0, 0.35);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0, 0.35);
+}
+
+.button:hover,
+.button:focus {
+
+}
+
+.button:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.button.disabled,
+.button[disabled] {
+    cursor: default;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.button-primary {
+    color: #ffffff;
+    border-color: transparent;
+}
+
+.button-primary {
+    background-color:#0044cc;
+}
+
+.button-primary:hover,
+.button-primary:focus,
+.button-primary:active,
+.button-primary.active,
+.button-primary.disabled,
+.button-primary[disabled] {
+    background-color: #0096FF;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* - - - FORMS - - - */
+
+.form {
+    position: relative;
+    background-color: #ffffff;
+}
+
+.form h1,
+.form h2,
+.form h3,
+.form h4,
+.form h5,
+.form h6 {
+    margin: 0 0 12px 0;
+}
+
+.form-description,
+.form-desc {
+    margin-bottom: 12px;
+    display: block;
+}
+
+.form-column,
+.form-row,
+.form-item {
+    position: relative;
+}
+
+.form-column,
+.form-item,
+.form label,
+.radio.inline,
+.checkbox.inline,
+.radio-options {
+    display: inline-block;
+}
+
+.form-row,
+.form-footer,
+.expanded-options-buttons {
+    clear: both;
+}
+
+.form-column {
+    vertical-align: top;
+    margin-right: 18px;
+    width: calc(50% - 20px);
+}
+
+.form-row {
+    width: 100%;
+}
+
+.form-section-row {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 12px;
+}
+
+.form-item {
+    margin: 0 12px 12px 0;
+    vertical-align: top;
+}
+
+.form label {
+    width: 200px;
+    vertical-align: middle;
+}
+
+.form-item.full,
+.form label.full {
+    width: 100%;
+}
+
+.error label {
+    color: #EB2D08;
+    font-weight: bold;
+}
+
+.error label:before {
+    content: "* ";
+}
+
+.radio, .checkbox {
+    min-height: 20px;
+    padding-left: 20px;
+}
+
+.radio.inline,
+.checkbox.inline {
+    padding-top: 5px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: auto;
+}
+
+.form-footer {
+    text-align: right;
+}
+
+.form-submit {
+    margin-bottom: 0;
+}
+
+
+span.form-help {
+    display: block;
+    background-color: #f7f7f7;
+    border: 1px solid #f0f0f0;
+    color: #999999;
+    font-size: 10px;
+    line-height: 12px;
+    font-style: italic;
+    padding: 2px 4px;
+    width: 200px;
+    margin-top: 4px;
+}
+
+.form-help-wrapper {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* input styling */
+
+input[type="text"], input[type="password"],
+input[type="file"], input[type="datetime"],
+input[type="datetime-local"], input[type="date"],
+input[type="month"], input[type="time"],
+input[type="week"], input[type="number"],
+input[type="email"], input[type="url"],
+input[type="search"], input[type="tel"],
+input[type="color"], .uneditable-input,
+textarea, select {
+    width: 200px;
+    padding: 4px;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 18px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    height: 30px;
+}
+
+input[type="text"].input-number {
+    width: 80px;
+}
+
+input[type="text"].input-short,
+select.input-short {
+    width: 60px;
+}
+
+select.width-auto {
+    width: auto;
+    min-width: 200px;
+}
+
+input[type="password"] {
+}
+
+input[type="checkbox"] {
+    margin: 3px 8px 3px 4px;
+    vertical-align: middle;
+}
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="file"]:disabled,
+textarea:disabled {
+    background-color: #f0f0f0;
+    color: #999999;
+}
+
+.sub-option input[type="radio"] {
+    margin: 0 5px;
+}
+
+textarea {
+    height: 96px;
+    width: 50%;
+}
+
+.small-textarea {
+    height: 60px;
+    width: 200px;
+}
+
+.inline-inputs input,
+.inline-inputs select {
+    width: auto;
+    margin: 2px 0;
+}
+
+.error input {
+    -webkit-box-shadow: inset 0 2px 3px #FFE2DD;
+    -moz-box-shadow: inset 0 2px 3px #FFE2DD;
+    box-shadow: inset 0 2px 3px #FFE2DD;
+}
+
+
+
+/* report widget styles */
+
+#container {
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 800px;
+}
+
+.header {
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-style: italic;
+    color: #999999;
+}
